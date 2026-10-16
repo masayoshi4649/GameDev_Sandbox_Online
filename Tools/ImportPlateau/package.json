@@ -1,0 +1,12 @@
+{
+  "name": "bayfront-plateau-import",
+  "private": true,
+  "type": "module",
+  "description": "国土交通省PLATEAUの実建築物を湾岸ゲーム用のGLBへ変換する取込ツール",
+  "dependencies": {
+    "draco3dgltf": "1.5.8"
+  },
+  "scripts": {
+    "import": "node import.mjs"
+  }
+}

@@ -1,0 +1,13 @@
+* text=auto
+*.cs text eol=lf
+*.json text eol=lf
+*.gdshader text eol=lf
+*.godot text eol=lf
+*.tscn text eol=lf
+*.cfg text eol=lf
+*.md text eol=lf
+*.sh text eol=lf
+*.service.example text eol=lf
+Dockerfile text eol=lf
+*.otf binary
+*.png binary

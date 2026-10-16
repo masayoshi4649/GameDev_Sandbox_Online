@@ -1,0 +1,38 @@
+# エクスポート出力全体と run-server.sh を /opt/bayfront に配置する例です。
+# bayfront ユーザーとグループを事前に作成してください。
+[Unit]
+Description=東京ベイ・サンドボックス 専用サーバー
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=bayfront
+Group=bayfront
+WorkingDirectory=/opt/bayfront
+ExecStart=/opt/bayfront/run-server.sh
+Environment=BAYFRONT_BINARY=/opt/bayfront/BayfrontServer.x86_64
+Environment=BAYFRONT_PORT=24567
+Environment=BAYFRONT_SAVE_PATH=/var/lib/bayfront/real-bayfront.json
+Environment=BAYFRONT_AUTOSAVE_SECONDS=30
+Environment=XDG_DATA_HOME=/var/lib/bayfront
+Environment=XDG_CONFIG_HOME=/var/lib/bayfront/config
+Environment=XDG_CACHE_HOME=/var/cache/bayfront
+StateDirectory=bayfront
+StateDirectoryMode=0750
+CacheDirectory=bayfront
+CacheDirectoryMode=0750
+UMask=0027
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+Restart=on-failure
+RestartSec=5
+KillSignal=SIGTERM
+TimeoutStopSec=45
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

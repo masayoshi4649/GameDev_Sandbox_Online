@@ -23,3 +23,20 @@ mono_crash.*.json
 *.exe
 # Uncomment if your project does not version PCK files as runtime dependencies.
 # *.pck
+
+# ローカルの検証結果と開発環境
+artifacts/
+build/
+bin/
+obj/
+.vs/
+.idea/
+*.user
+
+# 公開地理データから再生成する大容量の表示用キャッシュ
+Assets/RealWorld/Plateau/*
+Assets/RealWorld/Ground/*
+Tools/**/node_modules/
+Tools/**/.venv/
+Tools/**/.cache/
+Tools/**/__pycache__/

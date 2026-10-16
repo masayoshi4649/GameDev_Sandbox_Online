@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/UrbanTransformTests.cs" id="1"]
+
+[node name="地物変換と複数都市保存の試験" type="Node"]
+script = ExtResource("1")

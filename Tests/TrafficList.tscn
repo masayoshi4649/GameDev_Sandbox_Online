@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/UrbanTrafficListTests.cs" id="1"]
+
+[node name="停止中の交通一覧と個体ボタン維持の試験" type="Node"]
+script = ExtResource("1")
